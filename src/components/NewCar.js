@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Side from "../components/Side";
+import Input from "../components/Input"
 
 export default function NewCar() {
   const [title, setTitle] = useState("");
@@ -10,63 +11,24 @@ export default function NewCar() {
   const [km, setKm] = useState("");
   const [price, setPrice] = useState("");
 
-  const handleSubmit = () => console.log("submit");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('submit')
+  }
+
 
   return (
     <div className="home">
       <Side />
       <div className="main">
-        {/* <Side /> */}
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="title"
-            placeholder="title"
-            state={title}
-            setState={setTitle}
-          ></input>
-          <input
-            type="text"
-            name="model"
-            placeholder="model"
-            state={model}
-            setState={setModel}
-          ></input>
-          <input
-            type="select"
-            name="brand"
-            placeholder="brand"
-            state={brand}
-            setState={setBrand}
-          ></input>
-          <input
-            type="number"
-            name="year"
-            placeholder="year"
-            state={year}
-            setState={setYear}
-          ></input>
-          <input
-            type="text"
-            name="color"
-            placeholder="color"
-            state={color}
-            setState={setColor}
-          ></input>
-          <input
-            type="number"
-            name="km"
-            placeholder="km"
-            state={km}
-            setState={setKm}
-          ></input>
-          <input
-            type="number"
-            name="price"
-            placeholder="price"
-            state={price}
-            setState={setPrice}
-          ></input>
+          <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle} />
+          <Input type="text" name="model" placeholder="Modelo" value={model} setState={setModel} />
+          <Input type="text" name="color" placeholder="Cor" value={color} setState={setColor} />
+          <Input type="number" name="year" placeholder="Ano" value={year} setState={setYear} />
+          <Input type="number" name="km" placeholder="Kilometragem" value={km} setState={setKm} />
+          <Input type="number" name="price" placeholder="Preço" value={price} setState={setPrice} />
+          <input type="select" name="brand" placeholder="brand" onChange={setBrand}></input>
           <button>Submit</button>
         </form>
       </div>
