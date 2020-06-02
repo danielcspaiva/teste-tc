@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
+import React from "react";
+import Side from "../Side";
+import Banner from "../Banner";
 
-import '../../assets/styles/Shared.css';
+import "../../assets/styles/Shared.css";
 
-export default class App extends Component {
-    render() {
-        return (
-            <h1>Teste do Tradersclub</h1>
-        );
-    }
+export default function App() {
+  return (
+    <div className="home">
+      <Side />
+      <Banner />
+    </div>
+  );
 }
