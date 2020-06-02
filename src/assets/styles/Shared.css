@@ -9,6 +9,19 @@ body {
   display: flex;
 }
 
+.search-bar {
+  height: 10vh;
+  background-color: #0e1823;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 80%;
+  height: 2rem;
+}
+
 .menu {
   background-color: #0e1823;
   height: 100vh;
@@ -23,10 +36,23 @@ body {
   text-indent: -999em;
 }
 
+.car-info {
+  display: flex;
+  justify-content: space-between;
+}
+
 .banner {
   /* background-color: red; */
   font-family: "Lobster Two", cursive;
   font-size: 3rem;
   /* background: url("../img/car-wireframe.png") no-repeat; */
   background-blend-mode: multiply;
+  height: 100%;
+  width: 70vw;
+}
+
+.list {
+  height: 100%;
+  width: 70vw;
+  
 }
