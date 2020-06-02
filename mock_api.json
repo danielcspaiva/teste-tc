@@ -1,5 +1,6 @@
 {
-  "brands": [{
+  "brands": [
+    {
       "id": 1,
       "name": "VW"
     },
@@ -24,7 +25,8 @@
       "name": "Mitsubishi"
     }
   ],
-  "cars": [{
+  "cars": [
+    {
       "id": 1,
       "title": "Celta Azul 2005 Ar e Direção",
       "model": "Celta",
@@ -52,7 +54,7 @@
       "year": 2014,
       "color": "Branco",
       "km": 50000,
-      "price": 15000.00
+      "price": 15000
     }
   ]
 }

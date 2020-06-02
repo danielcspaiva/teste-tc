@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-// import SearchBar from "./SearchBar";
-// import carsJson from "../data/cars.json";
 import ListItem from "./ListItem";
 import { Link } from 'react-router-dom';
-
 
 export default function Content() {
   const [search, setSearch] = useState("");

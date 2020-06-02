@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Side from "../components/Side";
-import Input from "../components/Input"
+import Input from "../components/Input";
+import axios from "axios";
+
 
 export default function NewCar() {
   const [title, setTitle] = useState("");
@@ -10,12 +12,24 @@ export default function NewCar() {
   const [color, setColor] = useState("");
   const [km, setKm] = useState("");
   const [price, setPrice] = useState("");
+  const baseUrl = 'http://localhost:3004/cars';
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit')
-  }
+    let newCar = {
+      title,
+      model,
+      color,
+      year,
+      km,
+      price,
+      brand
+    }
 
+    axios.post(baseUrl, newCar)
+      .then(response => console.log(response))
+      .catch(err => console.log(err))
+  }
 
   return (
     <div className="home">
@@ -28,7 +42,7 @@ export default function NewCar() {
           <Input type="number" name="year" placeholder="Ano" value={year} setState={setYear} />
           <Input type="number" name="km" placeholder="Kilometragem" value={km} setState={setKm} />
           <Input type="number" name="price" placeholder="Preço" value={price} setState={setPrice} />
-          <input type="select" name="brand" placeholder="brand" onChange={setBrand}></input>
+          <input type="select" name="brand" placeholder="brand" onChange={(e) => setBrand(e.target.value)}></input>
           <button>Submit</button>
         </form>
       </div>
