@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ListItem from "./ListItem";
-import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar"
 
 export default function Content() {
   const [search, setSearch] = useState("");
@@ -13,7 +13,6 @@ export default function Content() {
   };
 
   useEffect(() => {
-    console.log(search)
     axios
       .get(baseUrl)
       .then((response) => setData(response.data))
@@ -22,21 +21,18 @@ export default function Content() {
 
   return (
     <div className="main">
-      <div className="search-bar">
-        <input type="text" name="search" value={search} placeholder="Filtrar Carros" onChange={updateSearch}></input>
-        <Link to="/addcar">
-          <button>Cadastrar</button>
-        </Link>
-      </div>
+      <SearchBar search={search} updateSearch={updateSearch} />
       {search === "" ? (
-        <div className="banner">
+        <div className="banner lambo">
           <h1> Pesquisa de veículos do TradersClub </h1>
         </div>
       ) : (
-        <div className="list">
-          {data.map((car, idx) => (
-            <ListItem key={idx} {...car} />
-          ))}
+        <div className="list lambo">
+          <div className="list-items">
+            {data.filter(car => car.title.toLowerCase().includes(search.toLowerCase())).map((car, idx) => (
+              <ListItem key={idx} {...car} />
+            ))}
+          </div>
         </div>
       )}
     </div>

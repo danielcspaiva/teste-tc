@@ -6,16 +6,17 @@ export default function ListItem({ title, model, brand, km, price, year, id }) {
     <Link to={`/${id}`}>
       <div className="car-info">
         <div>
-          <p>{title}</p>
+          <p className="bigger-p">{title}</p>
           <p>
             {model} - {brand} - {km} KM
           </p>
         </div>
-        <div>
-          <p>{price}</p>
+        <div className="align-right">
+          <p className="bigger-p">R${price}</p>
           <p>{year}</p>
         </div>
       </div>
+      <hr className="horizontal-line"></hr>
     </Link>
   );
 }
