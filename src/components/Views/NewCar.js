@@ -55,8 +55,7 @@ export default function NewCar(props) {
       <Side />
       <div className="main">
         <SearchBar />
-        <div className="lambo">
-          <div className="car-details">
+        <div className="lambo car-details">
           <p>Problemas ao salvar o formulário</p>
           <form>
             <div className="half">
@@ -79,7 +78,6 @@ export default function NewCar(props) {
               <button onClick={handleSubmit} className="btn filled-btn">Salvar</button>
             </div>
           </form>
-          </div>
         </div>
       </div>
     </div>

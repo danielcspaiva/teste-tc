@@ -43,6 +43,10 @@
     {
       "name": "Jeep",
       "id": 11
+    },
+    {
+      "name": "Hummer",
+      "id": 12
     }
   ],
   "cars": [
@@ -115,6 +119,16 @@
       "price": "21312",
       "brand": "dasdsa",
       "id": 7
+    },
+    {
+      "title": "Hummer H2 2010",
+      "model": "H2",
+      "color": "Amarelo",
+      "year": "2010",
+      "km": "40000",
+      "price": "350000",
+      "brand": "Hummer",
+      "id": 8
     }
   ]
 }

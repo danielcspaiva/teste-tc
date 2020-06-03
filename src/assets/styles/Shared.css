@@ -7,7 +7,6 @@ body {
   margin: 0;
   height: 100vh;
 }
-/* KEY ELEMENTS */
 
 p {
   margin: 0
@@ -46,8 +45,6 @@ input {
   opacity: 0.75;
 }
 
-/* HOME COMPONENT */
-
 .home {
   display: flex;
 }
@@ -61,7 +58,6 @@ input {
   justify-content: space-between;
 }
 
-/* BACKGROUND */
 .lambo {
   background: url("../img/car-wireframe.png") no-repeat;
   background-size: cover;
@@ -85,8 +81,6 @@ input {
   width: 100%;
 }
 
-/* SEARCH BAR COMPONENT */
-
 .search-bar {
   height: 15vh;
   background-color: #0e18238f;
@@ -108,8 +102,6 @@ input {
   padding: 1rem 1.5rem;
 }
 
-/* SIDE side-menu COMPONENT */
-
 .side-menu {
   background-color: #0e1823;
   height: 100vh;
@@ -123,8 +115,6 @@ input {
   margin-top: 10vh;
 }
 
-/* LIST COMPONENT */
-
 .list {
   width: 100%;
   overflow: scroll;
@@ -135,7 +125,6 @@ input {
 
 .list-items {
   width: 90%;
-  /* align-items: center; */
 }
 
 .car-info {
@@ -198,8 +187,6 @@ form input {
   border-bottom: 2px solid white;
   margin: 1rem;
 }
-
-
 
 .btns {
   display: flex;
