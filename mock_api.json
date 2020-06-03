@@ -27,6 +27,10 @@
     {
       "name": "Lamborghini",
       "id": 7
+    },
+    {
+      "name": "Ferrari",
+      "id": 8
     }
   ],
   "cars": [
@@ -49,6 +53,16 @@
       "price": "500000",
       "brand": "Lamborghini",
       "id": 2
+    },
+    {
+      "title": "Ferrari F50 1995",
+      "model": "F50",
+      "color": "",
+      "year": "1995",
+      "km": "20000",
+      "price": "1250000",
+      "brand": "Ferrari",
+      "id": 3
     }
   ]
 }

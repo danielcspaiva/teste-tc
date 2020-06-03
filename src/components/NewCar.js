@@ -35,7 +35,7 @@ export default function NewCar(props) {
       .then((response) => props.history.push("/"))
       .catch((err) => console.log(err));
   
-    if (brands.filter(brandFromDb => brandFromDb.name === brand).length === 0) {
+    if (brands.filter(brandFromDb => brandFromDb.name.toLowerCase() === brand.toLowerCase()).length === 0) {
       let newBrand = {name: brand}
       axios.post(baseBrandsUrl, newBrand)
         .then()
