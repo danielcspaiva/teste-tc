@@ -83,6 +83,16 @@
       "price": "900000",
       "brand": "Lamborghini",
       "id": 5
+    },
+    {
+      "title": "Chevrolet Onix 2016",
+      "model": "Onix",
+      "color": "Branco",
+      "year": "2016",
+      "km": "23000",
+      "price": "50000",
+      "brand": "Chevrolet",
+      "id": 6
     }
   ]
 }
