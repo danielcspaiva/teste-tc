@@ -1,4 +1,29 @@
-# TradersClub
+# Teste desenvolvedor Front End TradersClub
+
+<p align="center">
+  <img src="https://media.giphy.com/media/j5nK0H6xokLFwWSNIT/giphy.gif" />
+</p>
+
+# Instalação
+
+1. Clone o repositório
+```sh
+git clone https://github.com/danielcspaiva/teste-tc.git
+```
+2. Instale os pacotes NPM
+```sh
+npm install
+```
+3. Inicie o servidor com a mock API
+```sh
+json-server --watch mock_api.json --port 3004
+```
+Inicie o App
+```sh
+npm start
+```
+
+# Detalhes to teste
 
 Primeiramente, parabéns por atingir nossos requisitos iniciais.
 
