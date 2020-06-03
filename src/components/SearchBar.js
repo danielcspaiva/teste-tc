@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 export default function SearchBar({ search, updateSearch }) {
-
-
   return (
     <div className="search-bar">
       <input

@@ -1,6 +1,6 @@
-import Side from "../Side";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Side from "../Side";
 import Content from "../Content";
 import SearchBar from "../SearchBar";
 

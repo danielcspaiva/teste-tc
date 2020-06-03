@@ -5,7 +5,6 @@ import Input from "../Input";
 import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar";
 
-
 export default function CarDetails(props) {
   const carId = props.match.params.id;
   const baseUrl = "http://localhost:3004/cars?id=";
@@ -34,16 +33,15 @@ export default function CarDetails(props) {
     };
     axios
       .put(baseUrlPut + id, newCar)
-      .then((response) => props.history.push("/"))
+      .then(() => props.history.push("/"))
       .catch((err) => console.log(err));
   };
 
   const handleDelete = (e) => {
     e.preventDefault();
-
     axios
       .delete(baseUrlPut + id)
-      .then((response) => props.history.push("/"))
+      .then(() => props.history.push("/"))
       .catch((err) => console.log(err));
   };
 
