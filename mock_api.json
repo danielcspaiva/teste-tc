@@ -37,24 +37,34 @@
       "price": 11772.22
     },
     {
-      "id": 2,
-      "title": "Celta Preto 2003",
-      "model": "Celta",
+      "title": "Ricky",
+      "model": "rikcy",
+      "color": "cidssf",
+      "year": "1231",
+      "km": "312312",
+      "price": "3132123",
       "brand": "Chevrolet",
-      "year": 2005,
-      "color": "Preta",
-      "km": 209022,
-      "price": 8762.22
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Palio Branco 2014",
-      "model": "Palio",
-      "brand": "Fiat",
-      "year": 2014,
-      "color": "Branco",
-      "km": 50000,
-      "price": 15000
+      "title": "rafael",
+      "model": "rafa",
+      "color": "Preta",
+      "year": "12312",
+      "km": "132231",
+      "price": "12313132",
+      "brand": "Chevrolet",
+      "id": 3
+    },
+    {
+      "title": "celta",
+      "model": "celta",
+      "color": "preta",
+      "year": "21312",
+      "km": "1233213",
+      "price": "12332132",
+      "brand": "Chevrolet",
+      "id": 4
     }
   ]
 }
