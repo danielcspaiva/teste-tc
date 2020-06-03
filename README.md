@@ -14,7 +14,7 @@ git clone https://github.com/danielcspaiva/teste-tc.git
 ```sh
 npm install
 ```
-3. Inicie o servidor com a mock API
+3. Inicie o servidor com a mock API na porta 3004
 ```sh
 json-server --watch mock_api.json --port 3004
 ```
