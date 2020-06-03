@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Side from "../components/Side";
-import Input from "../components/Input";
 import axios from "axios";
-import SearchBar from "./SearchBar";
+import Side from "../Side";
+import Input from "../Input";
 import { Link } from "react-router-dom";
+import SearchBar from "../SearchBar";
 
 
-export default function NewCar(props) {
+export default function CarDetails(props) {
+  const carId = props.match.params.id;
+  const baseUrl = "http://localhost:3004/cars?id=";
+  const baseUrlPut = "http://localhost:3004/cars/";
+  const baseBrandsUrl = 'http://localhost:3004/brands';
   const [brands, setBrands] = useState([]);
   const [title, setTitle] = useState("");
   const [model, setModel] = useState("");
@@ -15,8 +19,7 @@ export default function NewCar(props) {
   const [color, setColor] = useState("");
   const [km, setKm] = useState("");
   const [price, setPrice] = useState("");
-  const baseUrl = "http://localhost:3004/cars";
-  const baseBrandsUrl = 'http://localhost:3004/brands';
+  const [id, setId] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,25 +32,40 @@ export default function NewCar(props) {
       price,
       brand,
     };
-
     axios
-      .post(baseUrl, newCar)
+      .put(baseUrlPut + id, newCar)
       .then((response) => props.history.push("/"))
       .catch((err) => console.log(err));
-  
-    if (brands.filter(brandFromDb => brandFromDb.name.toLowerCase() === brand.toLowerCase()).length === 0) {
-      let newBrand = {name: brand}
-      axios.post(baseBrandsUrl, newBrand)
-        .then()
-        .catch(err => console.log(err))
-    }
+  };
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+
+    axios
+      .delete(baseUrlPut + id)
+      .then((response) => props.history.push("/"))
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
-    axios.get(baseBrandsUrl)
-      .then(response => {
-        setBrands(response.data)
+    axios
+      .get(baseUrl + carId)
+      .then((response) => {
+        setTitle(response.data[0].title);
+        setModel(response.data[0].model);
+        setBrand(response.data[0].brand);
+        setYear(response.data[0].year);
+        setColor(response.data[0].color);
+        setKm(response.data[0].km);
+        setPrice(response.data[0].price);
+        setId(response.data[0].id);
       })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    axios.get(baseBrandsUrl)
+      .then(response => setBrands(response.data))
       .catch(err => console.log(err))
   }, [])
 
@@ -67,16 +85,19 @@ export default function NewCar(props) {
               <Input type="text" name="model" placeholder="Modelo" value={model} setState={setModel}/>
               <Input type="number" name="year" placeholder="Ano" value={year} setState={setYear}/>
             </div>
-            <div className="half">
-              <Input type="text" name="brand" placeholder="Marca" value={brand} setState={setBrand}/>
-            </div>
+            <select name="brand" value={brand} onChange={(e) => setBrand(e.target.value)}>
+              {brands.map(brand => <option key={brand.id} value={brand.name}>{brand.name}</option>)}
+            </select>
             <div className="half">
               <Input type="text" name="color" placeholder="Cor" value={color} setState={setColor}/>
               <Input type="number" name="price" placeholder="Preço" value={price} setState={setPrice}/>
               <Input type="number" name="km" placeholder="Kilometragem" value={km} setState={setKm}/>
             </div>
             <div className="btns">
-              <Link to="/"><button type="button" className="btn transparent-btn">Cancelar</button></Link>
+              <div className="align-left">
+                <button type="button" onClick={handleDelete} className="btn transparent-btn">Remover</button>
+                <Link to="/"><button type="button" className="btn transparent-btn">Cancelar</button></Link>
+              </div>
               <button onClick={handleSubmit} className="btn filled-btn">Salvar</button>
             </div>
           </form>

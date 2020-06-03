@@ -1,7 +1,7 @@
 # Teste Desenvolvedor Front-End TradersClub
 
 <p align="center">
-  <img src="https://media.giphy.com/media/KfHdjZ5AjSGXwASqSh/giphy.gif" style="width:auto; height:auto;"/>
+  <img src="https://media.giphy.com/media/KfHdjZ5AjSGXwASqSh/giphy.gif"/>
 </p>
 
 # Instalação

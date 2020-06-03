@@ -1,11 +1,9 @@
 import React from "react";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "../Home";
-
 import "../../assets/styles/Shared.css";
-import NewCar from "../NewCar";
-import CarDetails from "../CarDetails";
+import Home from "../Views/Home";
+import NewCar from "../Views/NewCar";
+import CarDetails from "../Views/CarDetails";
 
 export default function App() {
   return (
