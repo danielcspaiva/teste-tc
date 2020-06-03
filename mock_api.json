@@ -45,10 +45,10 @@
       "id": 1
     },
     {
-      "title": "lamborghini aventador 2015",
+      "title": "lamborghini aventador 2016",
       "model": "Aventador",
       "color": "Branca",
-      "year": "2015",
+      "year": "2016",
       "km": "5000",
       "price": "500000",
       "brand": "Lamborghini",
@@ -63,6 +63,26 @@
       "price": "1250000",
       "brand": "Ferrari",
       "id": 3
+    },
+    {
+      "title": "Lamborghini Diablo 1995",
+      "model": "Diablo",
+      "color": "Laranja",
+      "year": "1995",
+      "km": "45000",
+      "price": "600000",
+      "brand": "Lamborghini",
+      "id": 4
+    },
+    {
+      "title": "Lamborghini Countach 1985",
+      "model": "Countach",
+      "color": "Branca",
+      "year": "1985",
+      "km": "45000",
+      "price": "900000",
+      "brand": "Lamborghini",
+      "id": 5
     }
   ]
 }
