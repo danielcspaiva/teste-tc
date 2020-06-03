@@ -41,14 +41,9 @@ input {
   width: 80%;
 }
 
-/* button {
-  height: 2rem;
-} */
-
 ::placeholder { 
   color: white;
-  opacity: 1;
-  color: white;
+  opacity: 0.75;
 }
 
 /* HOME COMPONENT */
