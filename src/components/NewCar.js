@@ -3,6 +3,8 @@ import Side from "../components/Side";
 import Input from "../components/Input";
 import axios from "axios";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
+
 
 export default function NewCar(props) {
   const [brands, setBrands] = useState([]);
@@ -63,8 +65,11 @@ export default function NewCar(props) {
             {/* <select name="brand" value={brand} onChange={(e) => setBrand(e.target.value)}>
               {brands.map(brand => <option key={brand.id} value={brand.name}>{brand.name}</option>)}
             </select> */}
+            <div className="btns">
+              <Link to="/"><button type="button" className="btn transparent-btn">Cancelar</button></Link>
+              <button onClick={handleSubmit} className="btn filled-btn">Salvar</button>
+            </div>
           </form>
-          <button onClick={handleSubmit}>Submit</button>
         </div>
       </div>
     </div>
