@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 const Input = ({ type, name, placeholder, value, setState }) => {
   return (

@@ -34,15 +34,11 @@ export default function CarDetails(props) {
     };
     axios
       .put(baseUrlPut + id, newCar)
-      .then((response) => {
-        console.log(response)
-        props.history.push("/")
-      })
+      .then((response) => props.history.push("/"))
       .catch((err) => console.log(err));
   };
 
   const handleDelete = (e) => {
-    console.log("delete");
     e.preventDefault();
 
     axios
@@ -77,7 +73,7 @@ export default function CarDetails(props) {
     <div className="home">
       <Side />
       <div className="main">
-        <SearchBar search={''} />
+        <SearchBar />
         <div className="lambo">
           <form>
             <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle}/>

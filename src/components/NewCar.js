@@ -34,17 +34,20 @@ export default function NewCar(props) {
       .post(baseUrl, newCar)
       .then((response) => props.history.push("/"))
       .catch((err) => console.log(err));
-    
-    if (brands.filter(brandFromDb => brandFromDb.name === brand) === 0) {
-      axios.post(baseBrandsUrl)
-      .then(response => setBrands(response.data))
-      .catch(err => console.log(err))
+  
+    if (brands.filter(brandFromDb => brandFromDb.name === brand).length === 0) {
+      let newBrand = {name: brand}
+      axios.post(baseBrandsUrl, newBrand)
+        .then()
+        .catch(err => console.log(err))
     }
   };
 
   useEffect(() => {
     axios.get(baseBrandsUrl)
-      .then(response => setBrands(response.data))
+      .then(response => {
+        setBrands(response.data)
+      })
       .catch(err => console.log(err))
   }, [])
 
@@ -52,7 +55,7 @@ export default function NewCar(props) {
     <div className="home">
       <Side />
       <div className="main">
-        <SearchBar search={''} />
+        <SearchBar />
         <div className="lambo">
           <form>
             <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle}/>

@@ -23,11 +23,15 @@
     {
       "id": 6,
       "name": "Mitsubishi"
+    },
+    {
+      "name": "Lamborghini",
+      "id": 7
     }
   ],
   "cars": [
     {
-      "title": "Celta Azul 2005 Ar e Direçãodasdsasdadas",
+      "title": "Celta Azul 2005 Ar e Direção",
       "model": "Celta",
       "color": "Azul marinho",
       "year": 2005,
@@ -37,104 +41,14 @@
       "id": 1
     },
     {
-      "title": "rafael",
-      "model": "rafa",
-      "color": "Preta",
-      "year": "12312",
-      "km": "132231",
-      "price": "12313132",
-      "brand": "Chevrolet",
-      "id": 3
-    },
-    {
-      "title": "celtaasca",
-      "model": "celtacsa",
-      "color": "pretacsa",
-      "year": "21312",
-      "km": "1233213",
-      "price": "12332132",
-      "brand": "Chevrolet",
-      "id": 4
-    },
-    {
-      "title": "cccc",
-      "model": "ccc",
-      "color": "cccc",
-      "year": "2027",
-      "km": "1232",
-      "price": "123123213",
-      "brand": "",
-      "id": 5
-    },
-    {
-      "title": "cvvvvv",
-      "model": "vvv",
-      "color": "vvvv",
-      "year": "4444",
-      "km": "4444",
-      "price": "4444",
-      "brand": "Nissan",
-      "id": 6
-    },
-    {
-      "title": "tttttt",
-      "model": "ttttt",
-      "color": "tttttt",
-      "year": "555555",
-      "km": "555555",
-      "price": "55555555",
-      "brand": "",
-      "id": 7
-    },
-    {
-      "title": "ccccccc",
-      "model": "cccccc",
-      "color": "ccccccc",
-      "year": "555555",
-      "km": "55555",
-      "price": "5555555",
-      "brand": "",
-      "id": 8
-    },
-    {
       "title": "lamborghini aventador 2012",
-      "model": "aventador",
-      "color": "branca",
+      "model": "Aventador",
+      "color": "Branca",
       "year": "2012",
-      "km": "10000",
+      "km": "5000",
       "price": "500000",
-      "brand": "lamborghini",
-      "id": 9
-    },
-    {
-      "title": "aventador 2015",
-      "model": "aventador",
-      "color": "branca",
-      "year": "13232132",
-      "km": "1233132",
-      "price": "213123",
-      "brand": "lamborghini",
-      "id": 10
-    },
-    {
-      "title": "123321",
-      "model": "231213",
-      "color": "23113",
-      "year": "312231",
-      "km": "123231",
-      "price": "213321",
-      "brand": "231321231",
-      "id": 11
-    },
-    {
-      "title": "NOVO CARRO",
-      "model": "NOVO MODELO",
-      "color": "NOVA COR",
-      "year": "1231231",
-      "km": "123132",
-      "price": "1322322132",
-      "brand": "NOVA MARCA",
-      "id": 12
+      "brand": "Lamborghini",
+      "id": 2
     }
   ]
 }
