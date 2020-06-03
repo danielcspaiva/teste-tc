@@ -24,7 +24,7 @@ select {
   padding: 5px;
   padding-left: 20px;
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
   font-size: 2rem;
 }
 
@@ -74,13 +74,13 @@ input {
   width: auto;
 }
 
-.banner {
+.landing {
   font-family: "Lobster Two", cursive;
   font-size: 3rem;
   display: flex;
 }
 
-.banner h1 {
+.landing h1 {
   text-align: right;
   margin: 5rem;
 }
@@ -108,9 +108,9 @@ input {
   padding: 1rem 1.5rem;
 }
 
-/* SIDE MENU COMPONENT */
+/* SIDE side-menu COMPONENT */
 
-.menu {
+.side-menu {
   background-color: #0e1823;
   height: 100vh;
   width: 30vw;
@@ -119,7 +119,7 @@ input {
   justify-content: center;
 }
 
-.menu img {
+.side-menu img {
   margin-top: 10vh;
 }
 
@@ -165,22 +165,42 @@ input {
   width: 100%;
 }
 
-.half div {
+.input-container {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.car-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-details p {
+  margin: 2rem;
 }
 
 form {
   height: 100%;
-  margin: auto 4rem;
+  width: 70vw;
+  margin: auto 5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 form input {
-  height: 2rem;
+  width: 100%;
+  height: 3rem;
   font-size: 2rem;
+  border-bottom: 2px solid white;
+  margin: 1rem;
 }
+
+
 
 .btns {
   display: flex;

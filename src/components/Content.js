@@ -23,7 +23,7 @@ export default function Content() {
     <div className="main">
       <SearchBar search={search} updateSearch={updateSearch} />
       {search === "" ? (
-        <div className="banner lambo">
+        <div className="landing lambo">
           <h1> Pesquisa de veículos do TradersClub </h1>
         </div>
       ) : (

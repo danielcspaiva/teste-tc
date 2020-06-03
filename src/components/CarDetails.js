@@ -75,8 +75,12 @@ export default function CarDetails(props) {
       <div className="main">
         <SearchBar />
         <div className="lambo">
+          <div className="car-details">
+          <p>Problemas ao salvar o formulário</p>
           <form>
-            <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle}/>
+            <div className="half">
+              <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle}/>
+            </div>
             <div className="half">
               <Input type="text" name="model" placeholder="Modelo" value={model} setState={setModel}/>
               <Input type="number" name="year" placeholder="Ano" value={year} setState={setYear}/>
@@ -97,6 +101,7 @@ export default function CarDetails(props) {
               <button onClick={handleSubmit} className="btn filled-btn">Salvar</button>
             </div>
           </form>
+          </div>
         </div>
       </div>
     </div>

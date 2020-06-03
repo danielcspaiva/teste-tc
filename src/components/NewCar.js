@@ -57,22 +57,30 @@ export default function NewCar(props) {
       <div className="main">
         <SearchBar />
         <div className="lambo">
+          <div className="car-details">
+          <p>Problemas ao salvar o formulário</p>
           <form>
-            <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle}/>
-            <Input type="text" name="model" placeholder="Modelo" value={model} setState={setModel}/>
-            <Input type="text" name="color" placeholder="Cor" value={color} setState={setColor}/>
-            <Input type="number" name="year" placeholder="Ano" value={year} setState={setYear}/>
-            <Input type="number" name="km" placeholder="Kilometragem" value={km} setState={setKm}/>
-            <Input type="number" name="price" placeholder="Preço" value={price} setState={setPrice}/>
-            <Input type="text" name="brand" placeholder="Marca" value={brand} setState={setBrand}/>
-            {/* <select name="brand" value={brand} onChange={(e) => setBrand(e.target.value)}>
-              {brands.map(brand => <option key={brand.id} value={brand.name}>{brand.name}</option>)}
-            </select> */}
+            <div className="half">
+              <Input type="text" name="title" placeholder="Título" value={title} setState={setTitle}/>
+            </div>
+            <div className="half">
+              <Input type="text" name="model" placeholder="Modelo" value={model} setState={setModel}/>
+              <Input type="number" name="year" placeholder="Ano" value={year} setState={setYear}/>
+            </div>
+            <div className="half">
+              <Input type="text" name="brand" placeholder="Marca" value={brand} setState={setBrand}/>
+            </div>
+            <div className="half">
+              <Input type="text" name="color" placeholder="Cor" value={color} setState={setColor}/>
+              <Input type="number" name="price" placeholder="Preço" value={price} setState={setPrice}/>
+              <Input type="number" name="km" placeholder="Kilometragem" value={km} setState={setKm}/>
+            </div>
             <div className="btns">
               <Link to="/"><button type="button" className="btn transparent-btn">Cancelar</button></Link>
               <button onClick={handleSubmit} className="btn filled-btn">Salvar</button>
             </div>
           </form>
+          </div>
         </div>
       </div>
     </div>
