@@ -1,6 +1,6 @@
 # Teste Desenvolvedor Front-End TradersClub
 
-<p align="center" style="width: 100%;">
+<p align="center">
   <img src="https://media.giphy.com/media/j5nK0H6xokLFwWSNIT/giphy.gif" />
 </p>
 
