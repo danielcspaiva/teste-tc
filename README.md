@@ -18,7 +18,7 @@ npm install
 ```sh
 json-server --watch mock_api.json --port 3004
 ```
-Inicie o App
+4. Inicie o App
 ```sh
 npm start
 ```
