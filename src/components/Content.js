@@ -24,7 +24,7 @@ export default function Content() {
       <SearchBar search={search} updateSearch={updateSearch} />
       {search === "" ? (
         <div className="landing lambo">
-          <h1> Pesquisa de veículos do TradersClub </h1>
+          <h1 className="align-right"> Pesquisa de veículos<br></br> do <span>TradersClub</span></h1>
         </div>
       ) : (
         <div className="list lambo">
