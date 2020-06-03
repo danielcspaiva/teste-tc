@@ -1,4 +1,4 @@
-# Teste desenvolvedor Front End TradersClub
+# Teste Desenvolvedor Front-End TradersClub
 
 <p align="center">
   <img src="https://media.giphy.com/media/j5nK0H6xokLFwWSNIT/giphy.gif" />
@@ -23,7 +23,7 @@ Inicie o App
 npm start
 ```
 
-# Detalhes to teste
+# Descrição do Teste
 
 Primeiramente, parabéns por atingir nossos requisitos iniciais.
 
